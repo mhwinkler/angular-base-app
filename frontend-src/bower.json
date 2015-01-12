@@ -1,0 +1,20 @@
+{
+  "name": "angular-base-app",
+  "description": "Opinionated base application scaffolding and build processes for developing with Angular",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mhwinkler/angular-base-app",
+  "authors": [
+    "Matt Winkler <matt@heroicstudios.com>"
+  ],
+  "private": true,
+  "dependencies": {
+    "angular": "1.3.x",
+    "angular-animate": "1.3.x",
+    "angular-mocks": "1.3.x",
+    "angular-resource": "1.3.x",
+    "angular-ui-router": "~0.2.13",
+    "bootstrap": "~3.1.1",
+    "lodash": "2.4.x",
+    "jquery": "~2.1.1"
+  }
+}

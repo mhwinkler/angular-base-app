@@ -1,0 +1,55 @@
+<!doctype html>
+<html
+	ng-app ="<!-- @echo name -->"
+>
+<head>
+	<title>TITLE</title>
+	<meta name="description" content="DESCRIPTION" />
+	<meta name="keywords"  content="KEYWORDS" />
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	
+	<!-- build:style vendor -->
+	<!-- /build -->
+	
+	<!--[if !IE]> -->
+	<!-- build:style app -->
+	<!-- /build -->
+	<![endif]-->
+
+	<!--[if lte IE 9]>
+	<!-- build:style appIE -->
+	<!-- /build -->
+	<![endif]-->
+
+	<!-- build:script vendor -->
+	<!-- /build -->
+
+	<!-- build:script app -->
+	<!-- /build -->
+
+</head>
+<body
+	ng-cloak
+	class="ng-cloak"
+>
+	<!-- 2 + 1 = {{ 2 + 1 }} -->
+	
+	<div class="view-container">
+		<div ui-view class="view-frame"></div>
+    </div>
+	
+	<!-- @if applicationConfig_type=='development' -->
+	
+	<script src="http://localhost:<!-- @echo liveReloadPort -->/livereload.js"></script>
+	
+	<!-- @endif -->
+	<!-- @if applicationConfig_type!='development' -->
+	
+	<!-- Google Analytics -->
+
+	<!-- @endif -->
+</body>
+</html>

@@ -1,0 +1,40 @@
+@import "compass/css3/transition";
+
+// animations css stylesheet
+
+// animate ngRepeat in phone listing
+
+.phone-listing {
+	&.ng-enter, 
+	&.ng-leave, 
+	&.ng-move {
+		@include transition( 0.5s linear all );
+	}
+
+	&.ng-enter, 
+	&.ng-move {
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+
+		&.ng-enter-active,
+		&.ng-move-active {
+			opacity: 1;
+			height: 120px;
+		}
+	}
+
+	&.ng-leave {
+		opacity: 1;
+		overflow: hidden;
+
+		&.ng-leave-active {
+			opacity: 0;
+			height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+}
+

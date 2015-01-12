@@ -1,0 +1,80 @@
+{
+	"name"               : "AngularBaseApp",
+	"version"            : "v0.0.1",
+	
+	"environment"        : "production",
+	"liveReloadPort"     : "35729",
+	
+	"jsDir"              : "js",
+	"cssDir"             : "css",
+	"fontsDir"           : "fonts",
+	"imagesDir"          : "img",
+	"templatesDir"       : "templates",
+	"directivesDir"      : "directives",
+	"viewsDir"           : "views",
+	
+	"headSuffix"         : "head",
+	"tailSuffix"         : "tail",
+
+	"deployAssetsDir"    : "../www/assets",
+	"deployJsDir"        : "../www/assets/js",
+	"deployCssDir"       : "../www/assets/css",
+	"deployFontsDir"     : "../www/assets/fonts",
+	"deployImagesDir"    : "../www/assets/images",
+	"deployTemplatesDir" : "../www/assets/templates",
+	"deployHtmlTargetDir": "../www",
+	"staticFileDirectory": "assets",
+	
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mhwinkler/angular-base-app.git"
+	},
+
+	"applicationConfig"  : {
+		"development": {
+			"type"               : "development",
+			"defaultScheme"      : "",
+			"apiDomain"          : "",
+			"staticFileDomain"   : "",
+			"staticFileDirectory": "<%= pkg.staticFileDirectory %>",
+			"staticFileSuffix"   : ""
+		},
+		"production": {
+			"type"               : "production",
+			"defaultScheme"      : "",
+			"apiDomain"          : "",
+			"staticFileDomain"   : "",
+			"staticFileDirectory": "<%= pkg.staticFileDirectory %>",
+			"staticFileSuffix"   : ""
+		}
+	},
+
+	"dependencies": {
+		"bower"                  : "^1.3.1",
+		"grunt"                  : "0.4.x",
+		"grunt-angular-templates": "0.5.x",
+		"grunt-bless"            : "0.2.x",
+		"grunt-bump"             : "~0.0.16",
+		"grunt-contrib-clean"    : "0.6.x",
+		"grunt-contrib-coffee"   : "0.12.x",
+		"grunt-contrib-concat"   : "0.5.x",
+		"grunt-contrib-copy"     : "0.7.x",
+		"grunt-contrib-cssmin"   : "0.11.x",
+		"grunt-contrib-sass"     : "0.8.x",
+		"grunt-contrib-uglify"   : "0.7.x",
+		"grunt-contrib-watch"    : "0.6.x",
+		"grunt-html-build"       : "0.3.x",
+		"grunt-md5"              : "0.1.x",
+		"grunt-modernizr"        : "0.6.x",
+		"grunt-ng-annotate"      : "0.8.x",
+		"grunt-preprocess"       : "4.1.x",
+		"grunt-rename"           : "0.1.x",
+		"http-server"            : "0.7.x",
+		"karma"                  : "0.12.x",
+		"karma-chrome-launcher"  : "0.1.x",
+		"karma-jasmine"          : "0.3.x",
+		"protractor"             : "1.6.x",
+		"shelljs"                : "0.3.x",
+		"tmp"                    : "0.0.24"
+	}
+}
