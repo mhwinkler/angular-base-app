@@ -101,8 +101,8 @@ module.exports = ( grunt ) ->
 			options   :
 				force : true
 			all       : [ '.build/', 'vendor/', '<%= pkg.deployJsDir %>', '<%= pkg.deployCssDir %>', '<%= pkg.deployImagesDir %>', '<%= pkg.deployFontsDir %>' ] #'<%= pkg.deployHtmlTargetDir %>'
-			coffee    : [ '.build/build_first_pass/coffee>' ]
-			scss      : [ '.build/build_first_pass/<%= pkg.scssDir %>'  , '.build/build_final_pass/<%= pkg.cssDir %>' ] # '<%= pkg.deployHtmlTargetDir %>', '<%= pkg.deployCssDir %>'
+			coffee    : [ '.build/build_first_pass/app/**/*.coffee>', '.build/build_final_pass/<%= pkg.jsDir %>', '<%= pkg.deployJsDir %>' ]
+			scss      : [ '.build/build_first_pass/app/**/*.scss', '.build/build_final_pass/<%= pkg.cssDir %>', '<%= pkg.deployCssDir %>' ] # '<%= pkg.deployHtmlTargetDir %>', '<%= pkg.deployCssDir %>'
 
 		modernizr:
 			dist:
@@ -612,11 +612,11 @@ module.exports = ( grunt ) ->
 			'concat:allCss'
 			'cssmin'
 			'bless'
-			'md5'
+			'md5:css'
 			'htmlbuild:development'
 			'copy:deployDev'
 		]
-		scss_production : [ 'clean:scss', 'preprocess:prepScss', 'preprocess:prepCss', 'copy:buildStatics', 'sass', 'concat:allCss', 'cssmin', 'bless', 'md5', 'htmlbuild:production',  'copy:deployProd' ]
+		scss_production : [ 'clean:scss', 'preprocess:prepScss', 'preprocess:prepCss', 'copy:buildStatics', 'sass', 'concat:allCss', 'cssmin', 'bless', 'md5:css', 'htmlbuild:production',  'copy:deployProd' ]
 
 		coffee_development: [ 
 			'clean:coffee'
@@ -629,11 +629,11 @@ module.exports = ( grunt ) ->
 			'ngtemplates'
 			'ngAnnotate'
 			'concat:allPrettyJs'
-			'md5'
+			'md5:js'
 			'htmlbuild:development'
 			'copy:deployDev' 
 		]
-		coffee_production : [ 'clean:coffee', 'preprocess:prepCoffee', 'preprocess:prepJs', 'preprocess:prepTemplates', 'modernizr', 'copy:buildStatics', 'coffee', 'ngtemplates', 'ngAnnotate', 'concat:allPrettyJs', 'uglify', 'md5', 'htmlbuild:production',  'copy:deployProd' ]
+		coffee_production : [ 'clean:coffee', 'preprocess:prepCoffee', 'preprocess:prepJs', 'preprocess:prepTemplates', 'modernizr', 'copy:buildStatics', 'coffee', 'ngtemplates', 'ngAnnotate', 'concat:allPrettyJs', 'uglify', 'md5:js', 'htmlbuild:production',  'copy:deployProd' ]
 
 	grunt.registerTask watchTasksName, tasks for watchTasksName, tasks of watchTasks
 
