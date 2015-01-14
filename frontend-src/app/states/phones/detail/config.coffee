@@ -3,7 +3,7 @@ angular.module('states.phones.detail').config ( $stateProvider ) ->
 		url   : '/:phoneId'
 		views : 
 			main : 
-				templateUrl : window.abaTemplatePath + '/states/phones/detail/main.html'
+				templateUrl : 'states/phones/detail/main.html'
 				controller  : 'PhoneDetailCtrl'
 				
 			

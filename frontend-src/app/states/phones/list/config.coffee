@@ -3,5 +3,5 @@ angular.module('states.phones.list').config ( $stateProvider ) ->
 		url   : ''
 		views : 
 			main : 
-				templateUrl : window.abaTemplatePath + '/states/phones/list/main.html'
+				templateUrl : 'states/phones/list/main.html'
 				controller  : 'PhoneListCtrl'
