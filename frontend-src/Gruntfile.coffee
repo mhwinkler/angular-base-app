@@ -36,10 +36,12 @@ module.exports = ( grunt ) ->
 	vendorAllSource = [
 		'angular/**/*.js'
 		'angular-animate/**/*.js'
+		'angular-messages/**/*.js'
 		'angular-mocks/**/*.js'
 		'angular-resource/**/*.js'
 		'angular-route/**/*.js'
 		'angular-ui-router/release/**/*.js'
+		'angular-restmod/dist/**/*.js'
 		'bootstrap/dist/**/*.js'
 		'bootstrap/dist/**/*.css'
 		'jquery/dist/**/*.js'
@@ -53,10 +55,12 @@ module.exports = ( grunt ) ->
 		'vendor/lodash/dist/lodash.compat.js'
 		'vendor/angular/angular.js'
 		'vendor/angular-animate/angular-animate.js'
+		'vendor/angular-messages/angular-messages.js'
 		'vendor/angular-mocks/angular-mocks.js'
 		'vendor/angular-resource/angular-resource.js'
 		'vendor/angular-route/angular-route.js'
 		'vendor/angular-ui-router/release/angular-ui-router.js'
+		'vendor/angular-restmod/dist/angular-restmod-bundle.js'
 		'vendor/bootstrap/dist/js/bootstrap.js'
 	]
 
@@ -66,10 +70,12 @@ module.exports = ( grunt ) ->
 		'vendor/lodash/dist/lodash.compat.min.js'
 		'vendor/angular/angular.min.js'
 		'vendor/angular-animate/angular-animate.min.js'
+		'vendor/angular-messages/angular-messages.min.js'
 		# 'vendor/angular-mocks/angular-mocks.min.js'
 		'vendor/angular-resource/angular-resource.min.js'
 		'vendor/angular-route/angular-route.min.js'
 		'vendor/angular-ui-router/release/angular-ui-router.min.js'
+		'vendor/angular-restmod/dist/angular-restmod-bundle.min.js'
 		'vendor/bootstrap/dist/js/bootstrap.min.js'
 	]
 	

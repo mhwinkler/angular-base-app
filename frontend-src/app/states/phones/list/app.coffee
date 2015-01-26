@@ -1,1 +1,3 @@
-angular.module 'states.phones.list', ['ui.router']
+angular.module 'states.phones.list', [
+	'components.utils.base-router'
+]

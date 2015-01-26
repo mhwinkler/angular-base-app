@@ -1,0 +1,15 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			
+			{{ userAuthToken.email }}
+
+			<div auth-login
+				username="{{ userAuthToken.email }}"
+				password="{{ userAuthToken.password }}"
+				submit="login( username, password )"
+			></div>
+			
+		</div>
+	</div>
+</div>

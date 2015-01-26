@@ -1,0 +1,7 @@
+<div>We're at the home page</div>
+<div ng-if="Session.isGuest">
+	You're a guest
+</div>
+<div ng-if="!Session.isGuest">
+	You're logged in {{ Session.get('access_token') }}
+</div>

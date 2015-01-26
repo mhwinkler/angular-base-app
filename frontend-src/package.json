@@ -2,7 +2,7 @@
 	"name"               : "AngularBaseApp",
 	"version"            : "v0.0.1",
 	
-	"environment"        : "production",
+	"environment"        : "development",
 	"liveReloadPort"     : "35729",
 	
 	"jsDir"              : "js",

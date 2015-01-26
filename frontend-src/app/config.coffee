@@ -1,5 +1,3 @@
-angular.module('/* @echo name */').config ($urlRouterProvider) ->
-	$urlRouterProvider.otherwise '/phones'
 
 # TODO: Automagically append the template path to relative templateUrls
 # angular.module('states').config ( $stateProvider ) ->

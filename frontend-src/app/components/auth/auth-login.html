@@ -1,0 +1,55 @@
+<div ng-show="!Session.isGuest">
+	Welcome {{ Session.get('email') }}!
+</div>
+<div ng-show="!!Session.isGuest">
+	<form name="authLoginForm">
+
+		<div>{{ model.first_name }}</div>
+		<div>{{ model.last_name }}</div>
+		<div>{{ model.access_token }}</div>
+
+		<div class="form-group">
+			<label for="login-email">Email</label>
+			<input 
+				class="form-control" 
+				id="login-email" 
+				name="email" 
+				type="email" 
+				ng-model="model.email" 
+				required 
+			/>
+			
+			<ul class="field-errors" ng-show="authLoginForm.$submitted || authLoginForm.email.$touched">
+				<li class="alert alert-danger" ng-if="authLoginForm.email.$error.required">Field is required.</li>
+				<li class="alert alert-danger" ng-if="authLoginForm.email.$error.minlength">Does not meet minimum length.</li>
+				<li class="alert alert-danger" ng-if="authLoginForm.email.$error.email">Invalid email.</li>
+				<li class="alert alert-danger" ng-repeat="error in model.getFieldErrors().email">{{ error }}</li>
+			</ul>
+			
+		</div>
+
+		<div class="form-group">
+			<label for="login-password">Password</label>
+			<input 
+				class="form-control" 
+				id="login-password" 
+				name="password" 
+				type="password" 
+				ng-model="model.password" 
+				required 
+			/>
+			
+			<ul class="field-errors" ng-show="authLoginForm.$submitted || authLoginForm.password.$touched">
+				<li class="alert alert-danger" ng-if="authLoginForm.password.$error.required">Field is required.</li>
+				<li class="alert alert-danger" ng-if="authLoginForm.password.$error.minlength">Does not meet minimum length.</li>
+				<li class="alert alert-danger" ng-if="authLoginForm.password.$error.email">Invalid email.</li>
+				<li class="alert alert-danger" ng-repeat="error in model.getFieldErrors().password">{{ error }}</li>
+			</ul>
+		</div>
+
+		<div class="form-group">
+			<input type="submit" class="btn btn-primary" value="Login" ng-click="login()" />
+		</div>
+
+	</form>
+</div>
