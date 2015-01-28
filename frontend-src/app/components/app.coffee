@@ -4,6 +4,7 @@ angular.module 'components', [
 	'ngResource'
 	'components.utils'
 	'components.auth'
+	'components.header'
 	'components.phone'
 ]
 

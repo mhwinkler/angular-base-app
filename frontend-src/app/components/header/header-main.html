@@ -1,0 +1,44 @@
+<div class="header-main">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6">
+				<ul class="nav-links">
+					<li>
+						<a ui-sref="home.index">Home</a>
+					</li>
+					<li>
+						<a ui-sref="phones.list">Phones</a>
+					</li>
+					<li ng-if="!!Session.isGuest">
+						<a ui-sref="auth.login">Login Page</a>
+					</li>
+					<li ng-if="!Session.isGuest">
+						<a ui-sref="auth.logout">Logout</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<ul class="nav-links nav-links-right">
+					<li ng-if="!!Session.isGuest">
+						<a ng-click="showLoginPopup=!showLoginPopup">
+							Login Popup
+						</a>
+						<div 
+							class="login-popup"
+							ng-show="showLoginPopup"
+							ng-mouseleave="showLoginPopup=false"
+						>
+							<div auth-login
+								username="{{ Session.get('email') }}"
+								password=""
+							></div>
+						</div>
+					</li>
+					<li ng-if="!Session.isGuest">
+						{{ Session.get('email') }}
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
